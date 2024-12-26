@@ -13,7 +13,7 @@ const createWindow = () => {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      webviewTag: true,  // Дозволяє використання webview
+      webviewTag: true,
     },
   });
 

@@ -18,4 +18,4 @@ if let == "0":
     subprocess.run(["git", "commit", "-m", name])
     subprocess.run(["git", "push"])
 elif let == "1":
-    subprocess.run(["sass", "src/prefab/main.scss", "src/css/main.css"])
+    subprocess.run(["sass", "src/web/prefab/main.scss", "src/web/css/main.css"])

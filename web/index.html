@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser</title>
+  <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+  <div class="menu">
+    <input type="text" class="shrech">
+    <button class="button_Search">Search</button>
+    <div class="div_img_settings"><img src="static/img/1.png" class="img_settings"></div>
+    <div class="div_img_settings"><img src="static/img/2.png" class="img_settings"></div>
+  </div>
+  <webview class="webview" src="https://www.example.com"></webview>
+</body>
+<script src="static/iin/jquery.js"></script>
+</html>
+
+
+
+<!-- <h1>Electron + Express</h1>
+<input type="text" id="messageInput" placeholder="Введіть повідомлення">
+<button id="sendMessage">Надіслати</button>
+<p id="response"></p>
+
+<script>
+  const { ipcRenderer } = require('electron');
+
+  document.getElementById('sendMessage').addEventListener('click', () => {
+    const message = document.getElementById('messageInput').value;
+    ipcRenderer.send('send-message', message);
+  });
+
+  ipcRenderer.on('message-response', (event, response) => {
+    document.getElementById('response').innerText = response;
+  });
+</script> -->

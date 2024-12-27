@@ -48,11 +48,8 @@
     }
   },
   "dependencies": {
-    "axios": "^1.7.9",
     "electron-compile": "^6.4.4",
-    "electron-squirrel-startup": "^1.0.1",
-    "express": "^4.21.2",
-    "node-fetch": "^2.7.0"
+    "electron-squirrel-startup": "^1.0.1"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",

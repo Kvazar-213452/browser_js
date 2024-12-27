@@ -1,4 +1,5 @@
-import { app as electronApp, BrowserWindow, ipcMain } from 'electron';
+import { app as electronApp, BrowserWindow } from 'electron';
+import { initializeIpcHandlers } from './main_com/ipcHandlers.js';
 
 if (require('electron-squirrel-startup')) {
   electronApp.quit();
@@ -16,16 +17,17 @@ const createWindow = () => {
     },
   });
 
-  mainWindow.loadFile('index.html');
+  mainWindow.loadFile('web/index.html');
 
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
 };
 
-
+electronApp.allowRendererProcessReuse = false;
 
 electronApp.on('ready', () => {
+  initializeIpcHandlers();
   createWindow();
 });
 
@@ -40,9 +42,4 @@ electronApp.on('activate', () => {
   if (mainWindow === null) {
     createWindow();
   }
-});
-
-ipcMain.on('send-message', async (event, message) => {
-  event.reply('message-response', "dddd");
-  console.log(message)
 });

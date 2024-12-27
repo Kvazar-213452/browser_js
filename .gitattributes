@@ -1,3 +1,4 @@
 * text=auto
 
-src/lib/jquery.js linguist-documentation
+web/static/iin/jquery.js linguist-documentation
+web/static/css/*.css linguist-documentation

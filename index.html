@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron + Express</title>
+</head>
+<body>
+  <h1>Electron + Express</h1>
+  <input type="text" id="messageInput" placeholder="Введіть повідомлення">
+  <button id="sendMessage">Надіслати</button>
+  <p id="response"></p>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    document.getElementById('sendMessage').addEventListener('click', () => {
+      const message = document.getElementById('messageInput').value;
+      // Відправляємо повідомлення на сервер
+      ipcRenderer.send('send-message', message);
+    });
+
+    // Слухаємо відповідь від основного процесу
+    ipcRenderer.on('message-response', (event, response) => {
+      document.getElementById('response').innerText = response;
+    });
+  </script>
+</body>
+</html>

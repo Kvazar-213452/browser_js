@@ -11,7 +11,7 @@
     <input id="shrech" type="text" class="shrech">
     <button id="button_Search" class="button_Search">Search</button>
     <button id="button_reload" class="button_Search">Reload</button>
-    <div class="div_img_settings"><img src="static/img/1.png" class="img_settings"></div>
+    <div onclick="settings()" class="div_img_settings"><img src="static/img/1.png" class="img_settings"></div>
     <div onclick="hist()" class="div_img_settings"><img src="static/img/2.png" class="img_settings"></div>
   </div>
   <webview class="webview" id="webview" src="https://www.example.com"></webview>
@@ -24,11 +24,31 @@
     <div class="modal-content1">
       <div class="menu_modal">
         <p>History</p>
-        <div><img src=""></div>
         <div onclick="clos('modal')" class="div_img_hist"><img src="static/img/3.png" class="img_hist"></div>
         <div onclick="del_hist()" class="div_img_hist"><img src="static/img/4.png" class="img_hist"></div>
       </div>
       <div id="hist"></div>
+    </div>
+  </div>
+
+  <div id="modal1">
+    <div class="modal-content1">
+      <div class="menu_modal">
+        <p>Settings</p>
+        <div onclick="clos('modal1')" class="div_img_hist"><img src="static/img/3.png" class="img_hist"></div>
+      </div>
+      <div class="modal_div">
+        <div class="settings_div">
+          <text>Load url on start</text>
+          <br><br>
+          <p id="url_load"></p>
+        </div>
+        <div class="settings_div">
+          <text>Theme app</text>
+          <br><br>
+          <p id="theme_app"></p>
+        </div>
+      </div>
     </div>
   </div>
 

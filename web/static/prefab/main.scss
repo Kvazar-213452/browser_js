@@ -107,10 +107,7 @@ body {
 // modal windows
 
 #modal,
-#modal1,
-#modal2,
-#modal3,
-#modal4 {
+#modal1 {
     display: none;
     position: fixed;
     z-index: 10000;
@@ -157,7 +154,7 @@ body {
     height: 35px;
     width: 35px;
     margin-left: 10px;
-    top: -10px;
+    top: 7.5px;
     right: 10px;
     float: right;
     cursor: pointer;
@@ -177,6 +174,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.modal_div {
+    position: relative;
+    top: 50px;
+    padding: 10px;
+    overflow-y: auto; 
+    overflow-x: hidden;
 }
 
 // hist
@@ -214,4 +219,23 @@ body {
     overflow-x: hidden;
     height: 100%;
     width: 100%;
+}
+
+// settings
+// settings
+// settings
+
+.settings_div {
+    position: relative;
+    margin-bottom: 10px;
+    width: calc(100% - 15px);
+    padding: 10px;
+    background-color: config.$bg_color2;
+
+    text {
+        color: config.$main_color;
+        font-size: 14px;
+    }
+
+    p {font-size: 13px;}
 }

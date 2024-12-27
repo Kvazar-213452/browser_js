@@ -98,10 +98,7 @@ body {
 }
 
 #modal,
-#modal1,
-#modal2,
-#modal3,
-#modal4 {
+#modal1 {
   display: none;
   position: fixed;
   z-index: 10000;
@@ -147,7 +144,7 @@ body {
   height: 35px;
   width: 35px;
   margin-left: 10px;
-  top: -10px;
+  top: 7.5px;
   right: 10px;
   float: right;
   cursor: pointer;
@@ -167,6 +164,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.modal_div {
+  position: relative;
+  top: 50px;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .hist_div {
@@ -200,6 +205,21 @@ body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
+}
+
+.settings_div {
+  position: relative;
+  margin-bottom: 10px;
+  width: calc(100% - 15px);
+  padding: 10px;
+  background-color: #22242f;
+}
+.settings_div text {
+  color: #68ff9d;
+  font-size: 14px;
+}
+.settings_div p {
+  font-size: 13px;
 }
 
 /*# sourceMappingURL=main.css.map */

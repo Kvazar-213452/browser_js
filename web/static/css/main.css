@@ -3,7 +3,7 @@
   src: url("../iin/Minecraft_1.1.ttf") format("truetype");
 }
 body {
-  background-color: #121212;
+  background-color: #17181f;
   font-family: "MyCustomFont", sans-serif;
   color: #fff;
   overflow-y: hidden;
@@ -19,29 +19,28 @@ body {
 
 .webview {
   position: fixed;
-  height: calc(100% - 70px);
+  height: calc(100% - 60px);
   width: 100%;
-  top: 70px;
+  top: 60px;
 }
 
 .menu {
   position: fixed;
   width: 100%;
-  height: 70px;
-  background-color: #181818;
+  height: 60px;
+  background-color: #14141b;
 }
 
 .shrech {
   border: none;
-  background-color: #1d1d1d;
+  background-color: #17181f;
   position: relative;
   float: left;
   top: 15px;
   left: 15px;
   width: calc(100% - 450px);
-  height: 30px;
-  font-size: 17px;
-  font-weight: bold;
+  height: 20px;
+  font-size: 12px;
   color: #fff;
   padding: 5px;
   padding-left: 15px;
@@ -55,19 +54,19 @@ body {
 .button_Search {
   position: relative;
   float: left;
-  margin-right: 20px;
+  margin-right: 10px;
   border: none;
-  background-color: #1d1d1d;
-  font-size: 16px;
-  padding: 5px;
+  background-color: #17181f;
+  font-size: 13px;
+  padding: 7px;
   cursor: pointer;
   left: 20px;
   color: #fff;
   top: 15px;
-  height: 40px;
-  font-weight: bold;
+  height: 30px;
 }
 .button_Search:hover {
+  color: #68ff9d;
   opacity: 0.5;
 }
 
@@ -75,22 +74,132 @@ body {
   position: relative;
   float: right;
   right: 15px;
-  padding: 10px;
-  height: 20px;
-  top: 15px;
-  background-color: #1d1d1d;
+  height: 35px;
+  width: 35px;
+  top: 13px;
   cursor: pointer;
   margin-left: 10px;
+  background-color: #17181f;
 }
 .div_img_settings:hover {
-  opacity: 0.5;
+  background-color: #68ff9d;
+}
+.div_img_settings:hover img {
+  filter: invert(0%);
 }
 
 .img_settings {
-  position: relative;
   filter: invert(80%);
-  height: 30px;
-  top: -5px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#modal,
+#modal1,
+#modal2,
+#modal3,
+#modal4 {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 70%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #17181f;
+}
+
+.menu_modal {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  background-color: #14141b;
+  height: 50px;
+  width: 100%;
+}
+.menu_modal p {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  font-size: 17px;
+  color: #68ff9d;
+  float: left;
+}
+
+.div_img_hist {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
+  top: -10px;
+  right: 10px;
+  float: right;
+  cursor: pointer;
+  background-color: #22242f;
+}
+.div_img_hist:hover {
+  background-color: #68ff9d;
+}
+.div_img_hist:hover img {
+  filter: invert(0%);
+}
+
+.img_hist {
+  filter: invert(80%);
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hist_div {
+  position: relative;
+  width: calc(100% - 15px);
+  height: 20px;
+  margin-bottom: 10px;
+  background-color: #22242f;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.url_hist {
+  position: relative;
+  float: left;
+  color: #68ff9d;
+}
+
+.time_hist {
+  position: relative;
+  float: right;
+  color: #fff;
+}
+
+#hist {
+  position: relative;
+  top: 50px;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

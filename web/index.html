@@ -3,60 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browser</title>
-  <link rel="stylesheet" href="static/css/main.css">
+  <title>Міні-браузер</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background: #282c34;
+      color: white;
+    }
+    #url {
+      flex: 1;
+      margin-right: 10px;
+      padding: 5px;
+    }
+    #browser {
+      width: 100%;
+      height: calc(100vh - 50px);
+    }
+  </style>
 </head>
 <body>
-  <div class="menu">
-    <input id="shrech" type="text" class="shrech">
-    <button id="button_Search" class="button_Search">Search</button>
-    <button id="button_reload" class="button_Search">Reload</button>
-    <div onclick="settings()" class="div_img_settings"><img src="static/img/1.png" class="img_settings"></div>
-    <div onclick="hist()" class="div_img_settings"><img src="static/img/2.png" class="img_settings"></div>
-  </div>
-  <webview class="webview" id="webview" src="https://www.example.com"></webview>
+  <header>
+    <input id="url" type="text" placeholder="Введіть URL" />
+    <button id="go">Перейти</button>
+  </header>
+  <webview id="browser" src="https://google.com"></webview>
+  <script>
+    const urlInput = document.getElementById('url');
+    const goButton = document.getElementById('go');
+    const browser = document.getElementById('browser');
 
-  <!-- modal window -->
-  <!-- modal window -->
-  <!-- modal window -->
-
-  <div id="modal">
-    <div class="modal-content1">
-      <div class="menu_modal">
-        <p>History</p>
-        <div onclick="clos('modal')" class="div_img_hist"><img src="static/img/3.png" class="img_hist"></div>
-        <div onclick="del_hist()" class="div_img_hist"><img src="static/img/4.png" class="img_hist"></div>
-      </div>
-      <div id="hist"></div>
-    </div>
-  </div>
-
-  <div id="modal1">
-    <div class="modal-content1">
-      <div class="menu_modal">
-        <p>Settings</p>
-        <div onclick="clos('modal1')" class="div_img_hist"><img src="static/img/3.png" class="img_hist"></div>
-      </div>
-      <div class="modal_div">
-        <div class="settings_div">
-          <text>Load url on start</text>
-          <br><br>
-          <p id="url_load"></p>
-        </div>
-        <div class="settings_div">
-          <text>Theme app</text>
-          <br><br>
-          <p id="theme_app"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+    goButton.addEventListener('click', () => {
+      let url = urlInput.value;
+      if (!url.startsWith('http')) {
+        url = 'https://' + url;
+      }
+      browser.src = url;
+    });
+  </script>
 </body>
-<script src="static/js/func_browser.js"></script>
-<script src="static/js/modal_windows.js"></script>
-<script src="static/js/start.js"></script>
-<script>
-  start();
-</script>
 </html>
